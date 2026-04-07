@@ -1,5 +1,6 @@
 param(
     [string]$SourceExePath,
+    [string]$PublicBaseUrlPath,
     [string]$UninstallScriptPath,
     [string]$UninstallLauncherPath,
     [string]$InstallRoot
@@ -7,11 +8,11 @@ param(
 
 $ErrorActionPreference = "Stop"
 
-$appName = "Device Health Monitor PRO"
-$appId = "DeviceHealthMonitorPRO"
+$appName = "Device Health Monitor"
+$appId = "DeviceHealthMonitor"
 $publisher = "Krishna Prasath M"
-$defaultInstallRoot = Join-Path $env:LOCALAPPDATA "Programs\Device Health Monitor PRO"
-$defaultDataRoot = Join-Path $env:LOCALAPPDATA "DeviceHealthMonitorPRO"
+$defaultInstallRoot = Join-Path $env:LOCALAPPDATA "Programs\Device Health Monitor"
+$defaultDataRoot = Join-Path $env:LOCALAPPDATA "DeviceHealthMonitor"
 $desktopShortcutPath = Join-Path ([Environment]::GetFolderPath("Desktop")) "$appName.lnk"
 $startMenuFolder = Join-Path $env:APPDATA "Microsoft\Windows\Start Menu\Programs\$appName"
 $startMenuShortcutPath = Join-Path $startMenuFolder "$appName.lnk"
@@ -79,6 +80,9 @@ if (-not $InstallRoot) {
 if ([string]::IsNullOrWhiteSpace($SourceExePath) -or -not (Test-Path $SourceExePath)) {
     throw "The application EXE was not found in the setup package."
 }
+if ([string]::IsNullOrWhiteSpace($PublicBaseUrlPath) -or -not (Test-Path $PublicBaseUrlPath)) {
+    throw "The public base URL file was not found in the setup package."
+}
 if ([string]::IsNullOrWhiteSpace($UninstallScriptPath) -or -not (Test-Path $UninstallScriptPath)) {
     throw "The uninstall script was not found in the setup package."
 }
@@ -86,17 +90,19 @@ if ([string]::IsNullOrWhiteSpace($UninstallLauncherPath) -or -not (Test-Path $Un
     throw "The uninstall launcher was not found in the setup package."
 }
 
-$runningProcess = Get-Process -Name "DeviceHealthMonitorPRO" -ErrorAction SilentlyContinue
+$runningProcess = Get-Process -Name "DeviceHealthMonitor" -ErrorAction SilentlyContinue
 if ($runningProcess) {
-    Show-Popup "Close Device Health Monitor PRO before running setup again.", 0x10 | Out-Null
+    Show-Popup "Close Device Health Monitor before running setup again.", 0x10 | Out-Null
     exit 1
 }
 
 $resolvedSourceExe = (Resolve-Path $SourceExePath).Path
+$resolvedPublicBaseUrl = (Resolve-Path $PublicBaseUrlPath).Path
 $resolvedUninstallScript = (Resolve-Path $UninstallScriptPath).Path
 $resolvedUninstallLauncher = (Resolve-Path $UninstallLauncherPath).Path
 
-$exeTargetPath = Join-Path $InstallRoot "DeviceHealthMonitorPRO.exe"
+$exeTargetPath = Join-Path $InstallRoot "DeviceHealthMonitor.exe"
+$publicBaseUrlTarget = Join-Path $InstallRoot "public_base_url.txt"
 $uninstallScriptTarget = Join-Path $InstallRoot "uninstall_app.ps1"
 $uninstallLauncherTarget = Join-Path $InstallRoot "launch_uninstall.vbs"
 
@@ -105,6 +111,7 @@ New-Item -ItemType Directory -Force -Path $startMenuFolder | Out-Null
 New-Item -ItemType Directory -Force -Path $defaultDataRoot | Out-Null
 
 Copy-Item -Path $resolvedSourceExe -Destination $exeTargetPath -Force
+Copy-Item -Path $resolvedPublicBaseUrl -Destination $publicBaseUrlTarget -Force
 Copy-Item -Path $resolvedUninstallScript -Destination $uninstallScriptTarget -Force
 Copy-Item -Path $resolvedUninstallLauncher -Destination $uninstallLauncherTarget -Force
 
@@ -148,7 +155,7 @@ if (-not (Test-WebView2RuntimeInstalled)) {
     $warning = "`n`nMicrosoft Edge WebView2 Runtime was not detected. Install it if the app window does not open on this laptop."
 }
 
-$launchResult = Show-Popup "Device Health Monitor PRO is installed.`n`nInstalled to:`n$InstallRoot`n`nSaved app data will be stored in:`n$defaultDataRoot$warning`n`nOpen the app now?" 0x24
+$launchResult = Show-Popup "Device Health Monitor is installed.`n`nInstalled to:`n$InstallRoot`n`nSaved app data will be stored in:`n$defaultDataRoot$warning`n`nOpen the app now?" 0x24
 if ($launchResult -eq 6) {
     Start-Process -FilePath $exeTargetPath -WorkingDirectory $InstallRoot
 }

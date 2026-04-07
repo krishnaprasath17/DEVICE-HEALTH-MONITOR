@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Device Health Monitor PRO · Google Login</title>
+    <title>Device Health Monitor · Google Login</title>
     <script>
         (() => {
             try {
@@ -224,6 +224,57 @@
         .note strong {
             color: var(--note-strong);
         }
+        .phone-share {
+            margin-top: 22px;
+            display: grid;
+            gap: 16px;
+            padding: 18px;
+            border-radius: 22px;
+            border: 1px solid var(--panel-border);
+            background: rgba(15, 23, 42, 0.18);
+        }
+        html[data-theme="light"] .phone-share {
+            background: rgba(255, 255, 255, 0.82);
+        }
+        .phone-share h3 {
+            font-size: 1rem;
+        }
+        .phone-share p {
+            margin: 0;
+            font-size: 0.94rem;
+            line-height: 1.65;
+        }
+        .phone-share-row {
+            display: grid;
+            grid-template-columns: auto minmax(0, 1fr);
+            gap: 14px;
+            align-items: center;
+        }
+        .phone-share img {
+            width: 92px;
+            height: 92px;
+            padding: 8px;
+            border-radius: 18px;
+            background: #fff;
+            object-fit: contain;
+        }
+        .phone-share-link {
+            padding: 12px 14px;
+            border-radius: 16px;
+            border: 1px solid var(--panel-border);
+            background: rgba(8, 15, 28, 0.72);
+            color: var(--text);
+            word-break: break-all;
+            font-size: 0.9rem;
+            line-height: 1.55;
+        }
+        html[data-theme="light"] .phone-share-link {
+            background: rgba(255, 255, 255, 0.94);
+        }
+        .phone-share small {
+            color: var(--muted);
+            line-height: 1.6;
+        }
         @media (max-width: 860px) {
             .shell { grid-template-columns: 1fr; }
             .hero, .signin { padding: 34px 24px; }
@@ -231,6 +282,8 @@
                 border-right: none;
                 border-bottom: 1px solid rgba(148, 163, 184, 0.12);
             }
+            .phone-share-row { grid-template-columns: 1fr; }
+            .phone-share img { justify-self: center; }
         }
     </style>
 </head>
@@ -242,7 +295,7 @@
     <main class="shell">
         <section class="hero">
             <div class="badge">Desktop Flask Monitor</div>
-            <h1>Sign in to Device Health Monitor PRO.</h1>
+            <h1>Sign in to Device Health Monitor.</h1>
             <p>
                 The dashboard runs inside the desktop app, while Google sign-in opens securely in your default browser.
                 Once sign-in finishes, the desktop window switches back to the monitoring dashboard automatically.
@@ -280,6 +333,21 @@
             <div class="note">
                 <strong>Use the Google account that should receive alerts.</strong>
                 If sign-in does not finish, close the browser window and try once more from the desktop app.
+            </div>
+            <div class="phone-share">
+                <h3>Open This Monitor On Your Phone</h3>
+                {% if phone_access.enabled %}
+                <div class="phone-share-row">
+                    <img src="{{ phone_access.qr_data_uri }}" alt="QR code for opening Device Health Monitor on your phone">
+                    <div>
+                        <div class="phone-share-link">{{ phone_access.share_url }}</div>
+                        <small>{{ phone_access.setup_hint }}</small>
+                    </div>
+                </div>
+                {% else %}
+                <div class="phone-share-link">{{ phone_access.config_path }}</div>
+                <small>{{ phone_access.setup_hint }}</small>
+                {% endif %}
             </div>
         </section>
     </main>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Device Health Monitor PRO</title>
+    <title>Device Health Monitor</title>
     <script>
         (() => {
             try {
@@ -37,6 +37,7 @@
             --ram: #60a5fa;
             --disk: #34d399;
             --battery: #fbbf24;
+            --gpu: #f97316;
             --battery-health-line: #2dd4bf;
         }
         html[data-theme="light"] {
@@ -104,7 +105,7 @@
             align-items: center;
             margin-top: 12px;
         }
-        .meta-chip, .user-chip, .toggle-group, .action-btn, .logout-btn {
+        .meta-chip, .user-chip, .theme-toggle, .action-btn, .logout-btn {
             border-radius: 999px;
             border: 1px solid var(--border);
             background: var(--surface);
@@ -121,7 +122,7 @@
             align-items: center;
             justify-content: flex-end;
         }
-        .action-btn, .logout-btn, .toggle-group button {
+        .action-btn, .logout-btn, .theme-toggle {
             cursor: pointer;
             font: inherit;
         }
@@ -132,26 +133,61 @@
             background: var(--primary-btn);
             text-decoration: none;
         }
+        .phone-qr-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .phone-qr-preview, .phone-qr-fallback {
+            width: 28px;
+            height: 28px;
+            border-radius: 8px;
+            background: #fff;
+            color: #0f172a;
+            flex-shrink: 0;
+        }
+        .phone-qr-preview {
+            padding: 4px;
+            object-fit: contain;
+        }
+        .phone-qr-fallback {
+            display: grid;
+            place-items: center;
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 0.04em;
+        }
         .logout-btn {
             background: var(--surface);
             color: var(--text);
         }
-        .toggle-group {
+        .theme-toggle {
+            width: 52px;
+            height: 52px;
+            padding: 0;
             display: inline-flex;
-            gap: 4px;
-            padding: 4px;
+            align-items: center;
+            justify-content: center;
+            color: var(--text);
         }
-        .toggle-group button {
-            border: 1px solid transparent;
-            background: transparent;
-            color: var(--soft-text);
-            border-radius: 999px;
-            padding: 9px 14px;
-            font-weight: 700;
-        }
-        .toggle-group button.active {
+        .theme-toggle:hover {
             background: var(--active-chip);
-            color: #f8fafc;
+        }
+        .theme-icon-shell {
+            width: 22px;
+            height: 22px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .theme-icon-shell svg {
+            width: 22px;
+            height: 22px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 1.9;
+            stroke-linecap: round;
+            stroke-linejoin: round;
         }
         .user-chip {
             display: inline-flex;
@@ -220,6 +256,30 @@
             margin-top: 18px;
             display: grid;
             gap: 8px;
+        }
+        .gpu-summary-stack {
+            margin-top: 14px;
+            gap: 10px;
+        }
+        .gpu-summary-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 10px 12px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            background: var(--surface-soft);
+            align-items: center;
+        }
+        .gpu-summary-row span {
+            color: var(--soft-text);
+            font-size: 0.88rem;
+            line-height: 1.4;
+        }
+        .gpu-summary-row strong {
+            color: var(--text);
+            font-size: 0.92rem;
+            text-align: right;
         }
         .metric-label-row {
             display: flex;
@@ -326,6 +386,41 @@
             display: grid;
             place-items: center;
             min-height: 290px;
+            color: var(--soft-text);
+            text-align: center;
+        }
+        .gpu-panel {
+            padding: 24px;
+            display: grid;
+            gap: 18px;
+        }
+        .gpu-grid {
+            display: grid;
+            gap: 14px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        }
+        .gpu-card {
+            padding: 18px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            display: grid;
+            gap: 10px;
+        }
+        .gpu-card strong {
+            font-size: 1.1rem;
+            letter-spacing: -0.02em;
+        }
+        .gpu-card span,
+        .gpu-card small {
+            color: var(--muted);
+            line-height: 1.55;
+        }
+        .gpu-empty {
+            padding: 18px;
+            border-radius: 18px;
+            border: 1px solid var(--border);
+            background: var(--surface);
             color: var(--soft-text);
             text-align: center;
         }
@@ -459,15 +554,77 @@
             border-radius: 20px;
             background: #fff;
         }
+        .share-shell {
+            width: min(860px, 96vw);
+            height: auto;
+            max-height: min(720px, 92vh);
+        }
+        .share-grid {
+            display: grid;
+            grid-template-columns: minmax(220px, 260px) minmax(0, 1fr);
+            gap: 18px;
+            align-items: stretch;
+        }
+        .share-grid.single {
+            grid-template-columns: 1fr;
+        }
+        .share-card {
+            display: grid;
+            gap: 14px;
+            padding: 20px;
+            border-radius: 22px;
+            border: 1px solid var(--border);
+            background: var(--surface-soft);
+        }
+        .share-caption {
+            font-size: 0.88rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--soft-text);
+        }
+        .share-qr {
+            width: min(100%, 220px);
+            aspect-ratio: 1;
+            justify-self: center;
+            border-radius: 18px;
+            background: #fff;
+            padding: 12px;
+            box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 0.08);
+        }
+        .share-link {
+            padding: 14px 16px;
+            border-radius: 18px;
+            border: 1px solid var(--border);
+            background: var(--input);
+            color: var(--text);
+            line-height: 1.6;
+            word-break: break-all;
+        }
+        .share-hint, .share-meta {
+            margin: 0;
+            line-height: 1.7;
+        }
+        .share-hint {
+            color: var(--muted);
+        }
+        .share-meta {
+            color: var(--soft-text);
+            font-size: 0.94rem;
+        }
         @media (max-width: 900px) {
             body { padding: 16px; }
             .hero, .card, .chart-panel, .settings { padding: 18px; }
             .charts { grid-template-columns: 1fr; gap: 18px; }
+            .share-grid { grid-template-columns: 1fr; }
         }
         @media (max-width: 600px) {
             .hero-actions { justify-content: flex-start; }
             .chart-title { font-size: 1.35rem; }
             .chart-surface { min-height: 280px; }
+            .phone-qr-btn { width: 100%; justify-content: center; }
+            .action-btn, .logout-btn { width: 100%; justify-content: center; text-align: center; }
+            .report-actions { width: 100%; }
+            .report-actions .action-btn, .report-actions .logout-btn { width: 100%; }
         }
     </style>
 </head>
@@ -476,7 +633,7 @@
         <section class="panel hero">
             <div class="hero-top">
                 <div>
-                    <h1>Device Health Monitor PRO</h1>
+                    <h1>Device Health Monitor</h1>
                     <div class="hero-meta">
                         <div class="meta-chip" id="systemIdentity">Loading device identity...</div>
                         <div class="meta-chip" id="systemSecondary">Connecting to live monitor...</div>
@@ -484,11 +641,15 @@
                     </div>
                 </div>
                 <div class="hero-actions">
+                    <button class="action-btn phone-qr-btn" id="phoneShareBtn" type="button">
+                        {% if phone_access.enabled and phone_access.qr_data_uri %}
+                        <img class="phone-qr-preview" src="{{ phone_access.qr_data_uri }}" alt="" aria-hidden="true">
+                        {% else %}
+                        <span class="phone-qr-fallback" aria-hidden="true">QR</span>
+                        {% endif %}
+                        <span>Phone</span>
+                    </button>
                     <button class="action-btn" id="batteryReportBtn" type="button">Battery Report</button>
-                    <div class="toggle-group" role="group" aria-label="Theme mode">
-                        <button id="darkModeBtn" type="button">Dark Mode</button>
-                        <button id="lightModeBtn" type="button">Light Mode</button>
-                    </div>
                     <div class="user-chip">
                         {% if current_user.picture %}
                         <img src="{{ current_user.picture }}" alt="{{ current_user.name or current_user.email }}">
@@ -501,6 +662,9 @@
                         </div>
                     </div>
                     <a class="logout-btn" href="/logout?desktop=1">Log out</a>
+                    <button class="theme-toggle" id="themeToggleBtn" type="button" aria-label="Toggle theme" title="Toggle theme">
+                        <span class="theme-icon-shell" id="themeToggleIcon" aria-hidden="true"></span>
+                    </button>
                 </div>
             </div>
         </section>
@@ -511,6 +675,19 @@
                 <div class="card-main" id="cpuMain">0%</div>
                 <div class="card-sub" id="cpuSub">Waiting for CPU sample...</div>
                 <div class="bar"><div class="fill" id="cpuBar"></div></div>
+            </article>
+            <article class="card">
+                <div class="card-top"><span>GPU</span><span id="gpuPct">--</span></div>
+                <div class="card-main" id="gpuMain">--</div>
+                <div class="card-sub" id="gpuSub">Checking GPU availability...</div>
+                <div class="card-note" id="gpuMeta">Windows GPU counters are loading...</div>
+                <div class="metric-stack gpu-summary-stack" id="gpuSummaryList">
+                    <div class="gpu-summary-row">
+                        <span>GPU adapters</span>
+                        <strong>Loading...</strong>
+                    </div>
+                </div>
+                <div class="bar"><div class="fill" id="gpuBar"></div></div>
             </article>
             <article class="card">
                 <div class="card-top"><span>RAM</span><span id="ramPct">0%</span></div>
@@ -553,14 +730,15 @@
         <section class="charts">
             <article class="panel chart-panel">
                 <div class="chart-head">
-                    <h2 class="chart-title">CPU &amp; RAM History <small>(last 20)</small></h2>
+                    <h2 class="chart-title">CPU, RAM &amp; GPU History <small>(last 20)</small></h2>
                     <div class="legend">
                         <span class="legend-item" style="color: var(--cpu);"><span class="legend-line"></span>CPU %</span>
                         <span class="legend-item" style="color: var(--ram);"><span class="legend-line"></span>RAM %</span>
+                        <span class="legend-item" style="color: var(--gpu);"><span class="legend-line"></span>GPU %</span>
                     </div>
                 </div>
                 <div class="chart-surface" id="cpuRamChart">
-                    <div class="chart-empty">Collecting live CPU and RAM history...</div>
+                    <div class="chart-empty">Collecting live CPU, RAM, and GPU history...</div>
                 </div>
             </article>
             <article class="panel chart-panel">
@@ -586,6 +764,19 @@
                     <div class="chart-empty">Loading battery health history from the Windows battery report...</div>
                 </div>
             </article>
+        </section>
+
+        <section class="panel gpu-panel">
+            <div class="settings-head">
+                <div>
+                    <h2>GPU Activity</h2>
+                    <p>Live Intel and NVIDIA adapter usage, dedicated memory, and driver details for this laptop.</p>
+                </div>
+                <div class="meta-chip" id="gpuStatus">Reading GPU counters...</div>
+            </div>
+            <div class="gpu-grid" id="gpuAdapterGrid">
+                <div class="gpu-empty">Waiting for Windows GPU adapter details...</div>
+            </div>
         </section>
 
         <div class="footer-note">Updated every 2 seconds</div>
@@ -639,11 +830,56 @@
         </div>
     </div>
 
+    <div class="report-modal" id="phoneShareModal" hidden>
+        <div class="report-shell share-shell">
+            <div class="report-head">
+                <div>
+                    <h2>Phone Monitor Access</h2>
+                    <div class="meta-chip">{{ phone_access.mode_label }}</div>
+                </div>
+                <div class="report-actions">
+                    {% if phone_access.enabled %}
+                    <button class="action-btn" id="copyPhoneLinkBtn" type="button">Copy Link</button>
+                    <a class="logout-btn" href="{{ phone_access.share_url }}" target="_blank" rel="noreferrer">Open Link</a>
+                    {% endif %}
+                    <button class="logout-btn" id="closePhoneShareBtn" type="button">Close</button>
+                </div>
+            </div>
+            {% if phone_access.enabled %}
+            <div class="share-grid">
+                <section class="share-card">
+                    <div class="share-caption">Scan With Your Phone</div>
+                    <img class="share-qr" src="{{ phone_access.qr_data_uri }}" alt="QR code for opening Device Health Monitor on your phone">
+                    <p class="share-meta">Use the camera on your phone, then sign in there to monitor this device from a mobile screen.</p>
+                </section>
+                <section class="share-card">
+                    <div class="share-caption">Phone Link</div>
+                    <div class="share-link" id="phoneShareUrl">{{ phone_access.share_url }}</div>
+                    <p class="share-hint">{{ phone_access.setup_hint }}</p>
+                    <p class="share-meta">Phone view supports login, logout, live charts, battery report, and alert settings with the same responsive dashboard.</p>
+                </section>
+            </div>
+            {% else %}
+            <div class="share-grid single">
+                <section class="share-card">
+                    <div class="share-caption">Phone Access Setup</div>
+                    <div class="share-link">{{ phone_access.config_path }}</div>
+                    <p class="share-hint">{{ phone_access.setup_hint }}</p>
+                    <p class="share-meta">Add your ngrok HTTPS URL in that file, restart the app, keep ngrok running, and the QR button will turn into a live phone link.</p>
+                </section>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
     <script>
         const REFRESH_MS = 2000;
+        const HIDDEN_REFRESH_MS = 5000;
         const HISTORY_LIMIT = 20;
         const historySamples = [];
         let batteryHealthTrendSamples = [];
+        let healthRefreshTimer = 0;
+        let healthRefreshInFlight = false;
 
         const notificationForm = document.getElementById("notificationForm");
         const testEmailBtn = document.getElementById("testEmailBtn");
@@ -653,13 +889,18 @@
         const alertCoverageState = document.getElementById("alertCoverageState");
         const alertCadenceState = document.getElementById("alertCadenceState");
         const alertProtectionState = document.getElementById("alertProtectionState");
-        const darkModeBtn = document.getElementById("darkModeBtn");
-        const lightModeBtn = document.getElementById("lightModeBtn");
+        const themeToggleBtn = document.getElementById("themeToggleBtn");
+        const themeToggleIcon = document.getElementById("themeToggleIcon");
         const batteryReportBtn = document.getElementById("batteryReportBtn");
         const batteryReportModal = document.getElementById("batteryReportModal");
         const batteryReportFrame = document.getElementById("batteryReportFrame");
         const refreshBatteryReportBtn = document.getElementById("refreshBatteryReportBtn");
         const closeBatteryReportBtn = document.getElementById("closeBatteryReportBtn");
+        const phoneShareBtn = document.getElementById("phoneShareBtn");
+        const phoneShareModal = document.getElementById("phoneShareModal");
+        const copyPhoneLinkBtn = document.getElementById("copyPhoneLinkBtn");
+        const closePhoneShareBtn = document.getElementById("closePhoneShareBtn");
+        const phoneShareUrl = document.getElementById("phoneShareUrl");
 
         function escapeHtml(value) {
             return String(value ?? "")
@@ -705,6 +946,11 @@
                 if (value < 80) return "warn";
                 return "health";
             }
+            if (mode === "wear") {
+                if (value >= 40) return "danger";
+                if (value >= 20) return "warn";
+                return "good";
+            }
             if (mode === "network") {
                 return "signal";
             }
@@ -732,6 +978,41 @@
             return rules.length ? rules.join(" · ") : "No automatic rules selected";
         }
 
+        function themeIconMarkup(theme) {
+            if (theme === "light") {
+                return `
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="4.2"></circle>
+                        <path d="M12 2.5v2.3"></path>
+                        <path d="M12 19.2v2.3"></path>
+                        <path d="M4.9 4.9l1.6 1.6"></path>
+                        <path d="M17.5 17.5l1.6 1.6"></path>
+                        <path d="M2.5 12h2.3"></path>
+                        <path d="M19.2 12h2.3"></path>
+                        <path d="M4.9 19.1l1.6-1.6"></path>
+                        <path d="M17.5 6.5l1.6-1.6"></path>
+                    </svg>
+                `;
+            }
+            return `
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.8A8.8 8.8 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>
+                </svg>
+            `;
+        }
+
+        function updateThemeToggle(theme) {
+            const nextTheme = theme === "dark" ? "light" : "dark";
+            if (themeToggleIcon) {
+                themeToggleIcon.innerHTML = themeIconMarkup(nextTheme);
+            }
+            if (themeToggleBtn) {
+                const title = nextTheme === "light" ? "Switch to light mode" : "Switch to dark mode";
+                themeToggleBtn.title = title;
+                themeToggleBtn.setAttribute("aria-label", title);
+            }
+        }
+
         function applyTheme(theme) {
             const nextTheme = theme === "light" ? "light" : "dark";
             document.documentElement.dataset.theme = nextTheme;
@@ -740,9 +1021,49 @@
             } catch (error) {
                 console.error("Theme save failed", error);
             }
-            darkModeBtn.classList.toggle("active", nextTheme === "dark");
-            lightModeBtn.classList.toggle("active", nextTheme === "light");
+            updateThemeToggle(nextTheme);
             renderCharts();
+        }
+
+        function compactGpuName(name) {
+            return String(name || "Unknown GPU")
+                .replace(/\(R\)/g, "")
+                .replace(/\s+/g, " ")
+                .trim();
+        }
+
+        function describeGpuMemory(adapter) {
+            if (!adapter) return "Dedicated memory unavailable";
+            if (adapter.dedicated_usage && adapter.adapter_ram) {
+                return `Dedicated ${adapter.dedicated_usage} / ${adapter.adapter_ram}`;
+            }
+            if (adapter.shared_usage && adapter.adapter_ram) {
+                return `Shared ${adapter.shared_usage} / ${adapter.adapter_ram}`;
+            }
+            if (adapter.adapter_ram) {
+                return `Capacity ${adapter.adapter_ram}`;
+            }
+            return "Dedicated memory unavailable";
+        }
+
+        function buildGpuSummaryMarkup(adapters) {
+            if (!adapters.length) {
+                return `
+                    <div class="gpu-summary-row">
+                        <span>GPU adapters</span>
+                        <strong>Unavailable</strong>
+                    </div>
+                `;
+            }
+            return adapters.map((adapter) => {
+                const usage = adapter.utilization_percent == null ? "--" : formatPercent(adapter.utilization_percent);
+                return `
+                    <div class="gpu-summary-row">
+                        <span>${escapeHtml(compactGpuName(adapter.name))}</span>
+                        <strong>${escapeHtml(`${usage} · ${describeGpuMemory(adapter)}`)}</strong>
+                    </div>
+                `;
+            }).join("");
         }
 
         function fillNotificationForm(settings) {
@@ -846,6 +1167,7 @@
                 timeMs,
                 label: formatClock(timeMs),
                 cpu: Number(data.cpu?.percent ?? 0),
+                gpu: data.gpu?.percent == null ? null : Number(data.gpu.percent),
                 ram: Number(data.ram?.percent ?? 0),
                 disk: Number(data.disk?.main?.percent ?? 0),
                 battery: data.battery?.percent == null ? null : Number(data.battery.percent)
@@ -945,8 +1267,9 @@
         function renderCharts() {
             renderChart("cpuRamChart", historySamples, [
                 { key: "cpu", color: cssVar("--cpu", "#fb7185") },
-                { key: "ram", color: cssVar("--ram", "#60a5fa") }
-            ], "Collecting enough live CPU and RAM data to draw the chart...");
+                { key: "ram", color: cssVar("--ram", "#60a5fa") },
+                { key: "gpu", color: cssVar("--gpu", "#f97316") }
+            ], "Collecting enough live CPU, RAM, and GPU data to draw the chart...");
             renderChart("batteryDiskChart", historySamples, [
                 { key: "battery", color: cssVar("--battery", "#fbbf24") },
                 { key: "disk", color: cssVar("--disk", "#34d399") }
@@ -954,6 +1277,40 @@
             renderChart("batteryHealthChart", batteryHealthTrendSamples, [
                 { key: "health", color: cssVar("--battery-health-line", "#2dd4bf") }
             ], "Battery health history will appear after Windows provides battery report entries.");
+        }
+
+        function renderGpuDetails(data) {
+            const gpu = data.gpu || {};
+            const adapters = Array.isArray(gpu.adapters) ? gpu.adapters : [];
+            const gpuStatus = document.getElementById("gpuStatus");
+            const gpuAdapterGrid = document.getElementById("gpuAdapterGrid");
+
+            if (!gpu.available || !adapters.length) {
+                gpuStatus.textContent = "GPU counters unavailable";
+                gpuAdapterGrid.innerHTML = `<div class="gpu-empty">Windows did not return GPU adapter counters for this device.</div>`;
+                return;
+            }
+
+            gpuStatus.textContent = `${adapters.length} GPU adapter${adapters.length === 1 ? "" : "s"} · ${gpu.percent == null ? "--" : formatPercent(gpu.percent)} active`;
+            gpuAdapterGrid.innerHTML = adapters.map((adapter) => {
+                const usage = adapter.utilization_percent == null ? "--" : formatPercent(adapter.utilization_percent);
+                const dedicated = adapter.dedicated_usage || "--";
+                const total = adapter.adapter_ram || "--";
+                const shared = adapter.shared_usage || "--";
+                const driver = adapter.driver_version || "Driver version unavailable";
+                const processor = adapter.video_processor || "Video processor unavailable";
+                const temperature = adapter.temperature_c == null ? "" : ` · ${Number(adapter.temperature_c).toFixed(0)} C`;
+                const power = adapter.power_draw_w == null ? "" : ` · ${Number(adapter.power_draw_w).toFixed(1)} W`;
+                const clock = adapter.graphics_clock_mhz == null ? "" : ` · ${Number(adapter.graphics_clock_mhz).toFixed(0)} MHz`;
+                return `
+                    <article class="gpu-card">
+                        <strong>${escapeHtml(adapter.name || "Unknown GPU")}</strong>
+                        <span>${escapeHtml(processor)}</span>
+                        <span>Usage ${escapeHtml(usage)} · Dedicated ${escapeHtml(dedicated)} / ${escapeHtml(total)}</span>
+                        <small>Shared ${escapeHtml(shared)} · Driver ${escapeHtml(driver)}${escapeHtml(temperature)}${escapeHtml(power)}${escapeHtml(clock)}</small>
+                    </article>
+                `;
+            }).join("");
         }
 
         function updateBatteryHealthTrend(report) {
@@ -970,12 +1327,39 @@
             const timeMs = Number(data.timestamp_ms) || Date.now();
             document.getElementById("timestamp").textContent = `Last update: ${formatClock(timeMs)}`;
             document.getElementById("systemIdentity").textContent = data.system?.display_name || data.system?.product || data.system?.hostname || "Unknown device";
-            document.getElementById("systemSecondary").textContent = `${data.system?.hostname || data.system?.username || "user"} · ${data.system?.os || "Unknown OS"}`;
+            document.getElementById("systemSecondary").textContent = `${data.system?.username || "user"} · ${data.system?.os || "Unknown OS"}`;
 
             document.getElementById("cpuPct").textContent = formatPercent(data.cpu.percent);
             document.getElementById("cpuMain").textContent = formatPercent(data.cpu.percent);
             document.getElementById("cpuSub").textContent = `${data.cpu.cores} logical cores active on this device`;
             setBar("cpuBar", data.cpu.percent);
+
+            const gpu = data.gpu || {};
+            const gpuSummaryList = document.getElementById("gpuSummaryList");
+            if (!gpu.available) {
+                document.getElementById("gpuPct").textContent = "--";
+                document.getElementById("gpuMain").textContent = "No GPU";
+                document.getElementById("gpuSub").textContent = "Windows GPU counters unavailable";
+                document.getElementById("gpuMeta").textContent = "No live GPU adapter data is available on this device right now.";
+                gpuSummaryList.innerHTML = buildGpuSummaryMarkup([]);
+                setBar("gpuBar", 0);
+            } else {
+                const adapters = Array.isArray(gpu.adapters) ? gpu.adapters : [];
+                const primaryAdapter = adapters.length
+                    ? (adapters.find((adapter) => adapter.index === gpu.primary_index) || adapters[0])
+                    : null;
+                const adapterNames = adapters.map((adapter) => compactGpuName(adapter.name)).filter(Boolean);
+                document.getElementById("gpuPct").textContent = gpu.percent == null ? "--" : formatPercent(gpu.percent);
+                document.getElementById("gpuMain").textContent = gpu.percent == null ? "--" : formatPercent(gpu.percent);
+                document.getElementById("gpuSub").textContent = adapterNames.length
+                    ? adapterNames.join(" · ")
+                    : (primaryAdapter?.name || gpu.primary_name || "Active GPU");
+                document.getElementById("gpuMeta").textContent = primaryAdapter
+                    ? `${describeGpuMemory(primaryAdapter)} · ${gpu.adapter_count || adapters.length || 1} adapter${(gpu.adapter_count || adapters.length || 1) === 1 ? "" : "s"} detected`
+                    : `${gpu.adapter_count || 1} GPU adapter${gpu.adapter_count === 1 ? "" : "s"} detected`;
+                gpuSummaryList.innerHTML = buildGpuSummaryMarkup(adapters);
+                setBar("gpuBar", gpu.percent ?? 0);
+            }
 
             document.getElementById("ramPct").textContent = formatPercent(data.ram.percent);
             document.getElementById("ramMain").textContent = `${formatPercent(data.ram.percent)} (${data.ram.used}/${data.ram.total} GB)`;
@@ -1023,11 +1407,23 @@
             setBar("networkBar", Math.min(100, Math.round(network.upload_speed + network.download_speed)), "network");
 
             pushHistorySample(data);
+            renderGpuDetails(data);
             updateBatteryHealthTrend(data.battery_report || {});
             renderCharts();
         }
 
+        function scheduleNextHealthRefresh(delay = document.hidden ? HIDDEN_REFRESH_MS : REFRESH_MS) {
+            if (healthRefreshTimer) {
+                window.clearTimeout(healthRefreshTimer);
+            }
+            healthRefreshTimer = window.setTimeout(refreshHealth, delay);
+        }
+
         async function refreshHealth() {
+            if (healthRefreshInFlight) {
+                return;
+            }
+            healthRefreshInFlight = true;
             try {
                 const response = await fetch("/health", { cache: "no-store" });
                 const payload = await response.json();
@@ -1039,19 +1435,37 @@
                 renderHealth(payload);
             } catch (error) {
                 console.error("Health fetch error", error);
+            } finally {
+                healthRefreshInFlight = false;
+                scheduleNextHealthRefresh();
             }
+        }
+
+        function syncModalState() {
+            const modalOpen = !batteryReportModal.hidden || !phoneShareModal.hidden;
+            document.body.classList.toggle("modal-open", modalOpen);
         }
 
         function openBatteryReport(refresh = true) {
             batteryReportModal.hidden = false;
-            document.body.classList.add("modal-open");
+            syncModalState();
             batteryReportFrame.src = `/battery-report/raw?refresh=${refresh ? 1 : 0}&ts=${Date.now()}`;
         }
 
         function closeBatteryReport() {
             batteryReportModal.hidden = true;
-            document.body.classList.remove("modal-open");
+            syncModalState();
             batteryReportFrame.src = "about:blank";
+        }
+
+        function openPhoneShare() {
+            phoneShareModal.hidden = false;
+            syncModalState();
+        }
+
+        function closePhoneShare() {
+            phoneShareModal.hidden = true;
+            syncModalState();
         }
 
         notificationForm.addEventListener("submit", async (event) => {
@@ -1073,22 +1487,47 @@
             }
         });
 
-        darkModeBtn.addEventListener("click", () => applyTheme("dark"));
-        lightModeBtn.addEventListener("click", () => applyTheme("light"));
+        themeToggleBtn.addEventListener("click", () => {
+            const currentTheme = document.documentElement.dataset.theme === "light" ? "light" : "dark";
+            applyTheme(currentTheme === "dark" ? "light" : "dark");
+        });
+        phoneShareBtn.addEventListener("click", openPhoneShare);
         batteryReportBtn.addEventListener("click", () => openBatteryReport(true));
         refreshBatteryReportBtn.addEventListener("click", () => openBatteryReport(true));
         closeBatteryReportBtn.addEventListener("click", closeBatteryReport);
+        if (copyPhoneLinkBtn && phoneShareUrl) {
+            copyPhoneLinkBtn.addEventListener("click", async () => {
+                try {
+                    await navigator.clipboard.writeText(phoneShareUrl.textContent.trim());
+                    copyPhoneLinkBtn.textContent = "Copied";
+                    window.setTimeout(() => {
+                        copyPhoneLinkBtn.textContent = "Copy Link";
+                    }, 1600);
+                } catch (error) {
+                    console.error("Phone link copy failed", error);
+                }
+            });
+        }
+        closePhoneShareBtn.addEventListener("click", closePhoneShare);
         batteryReportModal.addEventListener("click", (event) => {
             if (event.target === batteryReportModal) closeBatteryReport();
         });
+        phoneShareModal.addEventListener("click", (event) => {
+            if (event.target === phoneShareModal) closePhoneShare();
+        });
         document.addEventListener("keydown", (event) => {
             if (event.key === "Escape" && !batteryReportModal.hidden) closeBatteryReport();
+            if (event.key === "Escape" && !phoneShareModal.hidden) closePhoneShare();
+        });
+        document.addEventListener("visibilitychange", () => {
+            if (!healthRefreshInFlight) {
+                scheduleNextHealthRefresh(document.hidden ? HIDDEN_REFRESH_MS : 250);
+            }
         });
 
         applyTheme(document.documentElement.dataset.theme === "light" ? "light" : "dark");
         loadNotificationSettings();
         refreshHealth();
-        window.setInterval(refreshHealth, REFRESH_MS);
     </script>
 </body>
 </html>

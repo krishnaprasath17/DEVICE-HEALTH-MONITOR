@@ -1,12 +1,12 @@
 $ErrorActionPreference = "Stop"
 
-$appName = "Device Health Monitor PRO"
-$appId = "DeviceHealthMonitorPRO"
+$appName = "Device Health Monitor"
+$appId = "DeviceHealthMonitor"
 $installRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 $desktopShortcutPath = Join-Path ([Environment]::GetFolderPath("Desktop")) "$appName.lnk"
 $startMenuFolder = Join-Path $env:APPDATA "Microsoft\Windows\Start Menu\Programs\$appName"
 $uninstallKeyPath = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall\$appId"
-$dataRoot = Join-Path $env:LOCALAPPDATA "DeviceHealthMonitorPRO"
+$dataRoot = Join-Path $env:LOCALAPPDATA "DeviceHealthMonitor"
 $shell = New-Object -ComObject WScript.Shell
 
 function Show-Popup {
@@ -17,9 +17,9 @@ function Show-Popup {
     return $shell.Popup($Message, 0, $appName, $Flags)
 }
 
-$runningProcess = Get-Process -Name "DeviceHealthMonitorPRO" -ErrorAction SilentlyContinue
+$runningProcess = Get-Process -Name "DeviceHealthMonitor" -ErrorAction SilentlyContinue
 if ($runningProcess) {
-    Show-Popup "Close Device Health Monitor PRO before uninstalling it.", 0x10 | Out-Null
+    Show-Popup "Close Device Health Monitor before uninstalling it.", 0x10 | Out-Null
     exit 1
 }
 
@@ -43,5 +43,5 @@ del /q "%~f0"
 [System.IO.File]::WriteAllText($cleanupScript, $cleanupContent, [System.Text.Encoding]::ASCII)
 Start-Process -FilePath (Join-Path $env:WINDIR "System32\cmd.exe") -ArgumentList "/c", "`"$cleanupScript`"" -WindowStyle Hidden
 
-Show-Popup "Device Health Monitor PRO has been removed from this laptop.`n`nSaved Google sign-in data and settings were kept here:`n$dataRoot" 0x40 | Out-Null
+Show-Popup "Device Health Monitor has been removed from this laptop.`n`nSaved Google sign-in data and settings were kept here:`n$dataRoot" 0x40 | Out-Null
 exit 0

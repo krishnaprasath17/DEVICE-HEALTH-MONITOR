@@ -5,11 +5,11 @@ param(
 $ErrorActionPreference = "Stop"
 
 $projectRoot = Split-Path -Parent $PSScriptRoot
-$distExe = if ($SourceExe) { $SourceExe } else { Join-Path $projectRoot "dist\DeviceHealthMonitorPRO.exe" }
+$distExe = if ($SourceExe) { $SourceExe } else { Join-Path $projectRoot "dist\DeviceHealthMonitor.exe" }
 $stagingRoot = Join-Path $projectRoot "build\installer_staging"
 $outputRoot = Join-Path $projectRoot "dist"
-$sedPath = Join-Path $projectRoot "build\DeviceHealthMonitorPROInstaller.sed"
-$outputExe = Join-Path $outputRoot "DeviceHealthMonitorPROSetup.exe"
+$sedPath = Join-Path $projectRoot "build\DeviceHealthMonitorInstaller.sed"
+$outputExe = Join-Path $outputRoot "DeviceHealthMonitorSetup.exe"
 $iexpressPath = Join-Path $env:WINDIR "System32\iexpress.exe"
 
 if (-not (Test-Path $distExe)) {
@@ -25,7 +25,8 @@ New-Item -ItemType Directory -Force -Path (Split-Path -Parent $sedPath) | Out-Nu
 New-Item -ItemType Directory -Force -Path $outputRoot | Out-Null
 
 $stageFiles = @(
-    @{ Source = $distExe; Name = "DeviceHealthMonitorPRO.exe" },
+    @{ Source = $distExe; Name = "DeviceHealthMonitor.exe" },
+    @{ Source = (Join-Path $projectRoot "public_base_url.txt"); Name = "public_base_url.txt" },
     @{ Source = (Join-Path $PSScriptRoot "install_app.ps1"); Name = "install_app.ps1" },
     @{ Source = (Join-Path $PSScriptRoot "uninstall_app.ps1"); Name = "uninstall_app.ps1" },
     @{ Source = (Join-Path $PSScriptRoot "launch_install.vbs"); Name = "launch_install.vbs" },
@@ -56,7 +57,7 @@ InstallPrompt=
 DisplayLicense=
 FinishMessage=
 TargetName=$targetName
-FriendlyName=Device Health Monitor PRO Setup
+FriendlyName=Device Health Monitor Setup
 AppLaunched=wscript.exe launch_install.vbs
 PostInstallCmd=<None>
 AdminQuietInstCmd=
@@ -70,12 +71,14 @@ SourceFiles0=$sourceRoot
 %FILE2%=
 %FILE3%=
 %FILE4%=
+%FILE5%=
 [Strings]
-FILE0=DeviceHealthMonitorPRO.exe
-FILE1=install_app.ps1
-FILE2=uninstall_app.ps1
-FILE3=launch_install.vbs
-FILE4=launch_uninstall.vbs
+FILE0=DeviceHealthMonitor.exe
+FILE1=public_base_url.txt
+FILE2=install_app.ps1
+FILE3=uninstall_app.ps1
+FILE4=launch_install.vbs
+FILE5=launch_uninstall.vbs
 "@
 
 [System.IO.File]::WriteAllText($sedPath, $sedContent, [System.Text.Encoding]::ASCII)

@@ -8,9 +8,9 @@ venv/
 
 build/
 build_setupbuild/
-dist/*
+dist/
 dist_setupbuild/
-!dist/DeviceHealthMonitorPROSetup.exe
+dist_portable/
 recovered/
 
 *.log
@@ -18,6 +18,9 @@ auth_debug.log
 
 battery_report.html
 battery_report_test.html
+
+runtime/*
+!runtime/.gitkeep
 
 google_auth_state.json
 google_oauth_client.json
@@ -27,3 +30,6 @@ node_modules/
 Thumbs.db
 .DS_Store
 test_heredoc.txt
+cloud_backend/data/
+cloud_agent_state.json
+cloud_agent.json

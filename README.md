@@ -1,52 +1,115 @@
-# Device Health Monitor PRO
+# Device Health Monitor
 
-Device Health Monitor PRO is a Windows desktop monitoring app built with Flask, pywebview, and PyInstaller. It shows live device health data inside a desktop window, keeps the backend hidden from the user, opens Google sign-in in the default browser, and delivers CPU and RAM alert emails to the signed-in Google account.
+Device Health Monitor is a Windows desktop application for live laptop health monitoring, Google sign-in, Gmail alerts, battery diagnostics, and phone access through `ngrok`.
 
-## What It Does
+It combines a hidden local Flask backend with a desktop shell built using `pywebview`, then packages everything into a standalone Windows EXE, a portable ZIP, and a setup installer.
 
-- Live desktop dashboard for CPU, RAM, disk, battery, and network activity
-- Hidden local Flask backend inside the desktop app
-- Google sign-in in browser, with the dashboard staying inside the app window
-- CPU and RAM alert thresholds with cooldown control
-- Battery charge bar, battery health bar, charging/disconnected state, and readable time left
-- Windows battery report viewer inside the app
-- Live history charts updating every 2 seconds
-- Battery health trend chart for the last 7 available days
-- Dark mode and light mode support
-- Windows installer build with desktop and Start Menu shortcuts
+## Highlights
 
-## Install On Another Laptop
+- Live monitoring for CPU, GPU, RAM, disk, battery, and network
+- Stable dual-GPU display for Intel and NVIDIA adapters
+- Battery health data from `powercfg` plus live Windows battery details
+- Google OAuth sign-in inside the desktop workflow
+- Gmail alerts from the signed-in Google account
+- Phone/browser access through a configured `ngrok` URL
+- Dark/light dashboard theme
+- Windows EXE, setup installer, and portable build flow
 
-Use the installer included in this repository:
+## Tech Stack
 
-- `dist/DeviceHealthMonitorPROSetup.exe`
+| Layer | Tools |
+| --- | --- |
+| Desktop shell | `pywebview`, `pystray`, `Pillow` |
+| Backend | `Flask` |
+| Telemetry | `psutil`, Windows WMI/CIM, `powercfg`, `nvidia-smi` |
+| Auth & mail | Google OAuth, Gmail API |
+| Packaging | `PyInstaller`, PowerShell, IExpress |
 
-The installer:
+## Architecture
 
-- Installs the app to `%LOCALAPPDATA%\Programs\Device Health Monitor PRO`
-- Creates Desktop and Start Menu shortcuts
-- Registers an uninstall entry
-- Stores app data in `%LOCALAPPDATA%\DeviceHealthMonitorPRO`
-
-## Google OAuth Setup
-
-The live Google OAuth client file is intentionally not committed to this repository.
-
-To configure Google login:
-
-1. Copy `google_oauth_client.example.json` to `google_oauth_client.json`
-2. Replace the placeholder values with your Google OAuth web client values
-3. Make sure this redirect URI is added in Google Cloud:
-
-```text
-http://127.0.0.1:5000/auth/google/callback
+```mermaid
+flowchart LR
+    A["Desktop App (pywebview)"] --> B["Local Flask Backend"]
+    B --> C["Windows Telemetry"]
+    C --> C1["CPU / RAM / Disk / Network"]
+    C --> C2["Battery Report + WMI/CIM"]
+    C --> C3["Intel / NVIDIA GPU Data"]
+    B --> D["Google OAuth + Gmail API"]
+    B --> E["ngrok Public URL"]
+    E --> F["Phone Browser Access"]
 ```
 
-The app uses Google profile/email access and Gmail send access so alert emails can be sent from the signed-in Google account.
+## Core Features
 
-## Run From Source
+### 1. Live System Dashboard
 
-### Python desktop app
+The main dashboard refreshes every 2 seconds and presents:
+
+- CPU utilization with a steadier rolling sample
+- GPU usage with fixed adapter placement so the Intel/NVIDIA cards do not jump positions
+- RAM and disk usage
+- Battery charge, battery health, and report-based capacity details
+- Network upload/download rates
+- Recent history charts for CPU, GPU, RAM, battery, disk, and battery health
+
+### 2. Battery Diagnostics
+
+Battery information is built from two sources:
+
+- Live Windows battery state
+- Parsed `powercfg /batteryreport` output
+
+This lets the app show:
+
+- battery percentage and charge state
+- estimated runtime / charge completion
+- design capacity and full-charge capacity
+- health percentage and wear
+- manufacturer / chemistry / serial details when available
+
+### 3. Google Sign-In and Gmail Alerts
+
+The app supports Google login through a web client configuration and can send alert emails from the signed-in Gmail account.
+
+Alert controls currently include:
+
+- CPU threshold
+- RAM threshold
+- alert check interval
+- cooldown window
+- test email
+
+### 4. Phone Access Through ngrok
+
+If you set a public HTTPS URL in `public_base_url.txt`, the app can:
+
+- generate a QR code
+- open the same dashboard on a phone browser
+- keep Google sign-in working over the public `ngrok` domain
+
+## Project Structure
+
+```text
+app.py                         Flask backend, telemetry, auth, alerts
+desktop_app.py                 Desktop launcher and ngrok orchestration
+templates/                     Active UI templates
+installer/                     Setup / uninstall scripts
+build_portable.ps1             Portable folder + ZIP builder
+DeviceHealthMonitor.spec       PyInstaller definition
+requirements.txt               Python dependencies
+google_oauth_client.example.json
+public_base_url.txt            Placeholder ngrok config
+```
+
+## Requirements
+
+- Windows 10 / 11
+- Python 3.10+
+- Microsoft Edge WebView2 Runtime
+- Optional: `ngrok`
+- Optional: `nvidia-smi` for richer NVIDIA GPU details
+
+## Local Development
 
 ```powershell
 python -m venv venv
@@ -55,63 +118,98 @@ pip install -r requirements.txt
 python desktop_app.py
 ```
 
-### Flask backend only
+## Google OAuth Setup
 
-```powershell
-venv\Scripts\activate
-python app.py
-```
-
-## Build The Desktop EXE
-
-```powershell
-venv\Scripts\activate
-python -m PyInstaller --noconfirm --clean DeviceHealthMonitorPRO.spec
-```
-
-The generated desktop EXE will be created in:
+1. Copy `google_oauth_client.example.json` to `google_oauth_client.json`
+2. Fill in your Google OAuth **web** client values
+3. Add this redirect URI in Google Cloud:
 
 ```text
-dist\DeviceHealthMonitorPRO.exe
+http://127.0.0.1:5000/auth/google/callback
 ```
 
-## Build The Installer
+If you also use `ngrok`, add:
 
-After building the EXE, create the Windows installer with:
+```text
+https://YOUR-NGROK-DOMAIN
+https://YOUR-NGROK-DOMAIN/auth/google/callback
+```
+
+Google requires exact origin and redirect URI matching.
+
+## ngrok Setup
+
+1. Start the app so Flask is running on port `5000`
+2. Start `ngrok`
+
+```powershell
+ngrok http 5000
+```
+
+3. Put your reserved HTTPS URL into `public_base_url.txt`
+4. Restart the app if needed
+
+## Build
+
+### Build EXE
+
+```powershell
+venv\Scripts\activate
+python -m PyInstaller --noconfirm --clean DeviceHealthMonitor.spec
+```
+
+Output:
+
+```text
+dist\DeviceHealthMonitor.exe
+```
+
+### Build Portable Package
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\build_portable.ps1
+```
+
+Output:
+
+```text
+dist_portable\DeviceHealthMonitor-Portable
+dist_portable\DeviceHealthMonitor-Portable.zip
+```
+
+### Build Setup Installer
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\installer\build_installer.ps1
 ```
 
-The generated installer will be created in:
+Output:
 
 ```text
-dist\DeviceHealthMonitorPROSetup.exe
+dist\DeviceHealthMonitorSetup.exe
 ```
 
-## Main Files
+## Runtime Data
 
-- `app.py`: Flask backend, hardware telemetry, Google OAuth, alerts, battery report parsing
-- `desktop_app.py`: pywebview desktop launcher with hidden backend behavior
-- `templates/`: dashboard, login, and desktop auth-complete pages
-- `installer/`: installer builder, install script, uninstall script, and hidden launchers
-- `DeviceHealthMonitorPRO.spec`: PyInstaller build definition
-- `requirements.txt`: Python dependencies
+During source runs, runtime files are kept under `runtime/` so the repo stays clean.
 
-## Frontend Source Notes
+Typical runtime data includes:
 
-This repository also contains the original Figma/Vite source bundle under `src/` and `package.json`. The currently shipped Windows desktop app uses the Flask templates in `templates/` as the active UI.
+- logs
+- Google auth state
+- battery report cache
+- notification settings
+- generated local secrets
 
-## Dependencies
+Installed builds store user data under the local app-data folder, while portable builds keep runtime files next to the EXE.
 
-Python dependencies are listed in `requirements.txt`, including:
+## Security Notes
 
-- Flask
-- psutil
-- pywebview
-- PyInstaller
-- google-auth and Google API client libraries
+- `google_oauth_client.json` is intentionally not committed
+- the repo only includes `google_oauth_client.example.json`
+- `public_base_url.txt` is a placeholder and should be changed locally
+- Google OAuth redirect URIs must match your actual localhost / ngrok setup
 
 ## Attribution
 
-See `ATTRIBUTIONS.md` for third-party attribution notes.
+See [ATTRIBUTIONS.md](ATTRIBUTIONS.md) for third-party attribution notes.
