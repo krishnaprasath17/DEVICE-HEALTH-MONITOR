@@ -1,0 +1,145 @@
+2026-04-06 20:11:07,638 [WARNING] device_health_monitor: CPU sampler is not running, starting or restarting it.
+2026-04-06 20:11:07,638 [INFO] device_health_monitor: Background services started.
+2026-04-06 20:11:07,641 [INFO] device_health_monitor: CPU sampler started.
+2026-04-06 20:11:07,641 [WARNING] device_health_monitor: Alert monitor is not running, starting or restarting it.
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+2026-04-06 20:11:08,308 [WARNING] device_health_monitor: Google token refresh failed.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 534, in build_credentials
+    credentials.refresh(GoogleRequest())
+  File "C:\Users\mkpra\Downloads\Untitled\venv\lib\site-packages\google\oauth2\credentials.py", line 412, in refresh
+    ) = reauth.refresh_grant(
+  File "C:\Users\mkpra\Downloads\Untitled\venv\lib\site-packages\google\oauth2\reauth.py", line 370, in refresh_grant
+    _client._handle_error_response(response_data, retryable_error)
+  File "C:\Users\mkpra\Downloads\Untitled\venv\lib\site-packages\google\oauth2\_client.py", line 69, in _handle_error_response
+    raise exceptions.RefreshError(
+google.auth.exceptions.RefreshError: ('invalid_grant: Bad Request', {'error': 'invalid_grant', 'error_description': 'Bad Request'})
+2026-04-06 20:11:08,408 [WARNING] device_health_monitor: Automatic RAM alert trigger met at 90.6% but the email could not be sent: Please sign in with Google to continue.
+127.0.0.1 - - [06/Apr/2026 20:11:13] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:11:14] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:11:14] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:11:14] "GET /notification-settings HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:11:17] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [06/Apr/2026 20:11:21] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:11:22] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:11:22] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:11:24] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:11:24] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:11:26] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:11:35] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:11:36] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:11:36] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:11:37] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:11:37] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:11:38] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:11:38] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:11:42] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:11:42] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:11:47] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:11:48] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:11:49] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:11:54] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:11:54] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:11:55] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:11:59] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:12:00] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:12:01] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:12:02] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:12:06] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:12:06] "GET /health HTTP/1.1" 200 -
+2026-04-06 20:12:08,825 [WARNING] device_health_monitor: Google token refresh failed.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 534, in build_credentials
+    credentials.refresh(GoogleRequest())
+  File "C:\Users\mkpra\Downloads\Untitled\venv\lib\site-packages\google\oauth2\credentials.py", line 412, in refresh
+    ) = reauth.refresh_grant(
+  File "C:\Users\mkpra\Downloads\Untitled\venv\lib\site-packages\google\oauth2\reauth.py", line 370, in refresh_grant
+    _client._handle_error_response(response_data, retryable_error)
+  File "C:\Users\mkpra\Downloads\Untitled\venv\lib\site-packages\google\oauth2\_client.py", line 69, in _handle_error_response
+    raise exceptions.RefreshError(
+google.auth.exceptions.RefreshError: ('invalid_grant: Bad Request', {'error': 'invalid_grant', 'error_description': 'Bad Request'})
+2026-04-06 20:12:08,834 [WARNING] device_health_monitor: Automatic RAM alert trigger met at 86.0% but the email could not be sent: Please sign in with Google to continue.
+127.0.0.1 - - [06/Apr/2026 20:12:12] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:12:12] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:12:13] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:12:14] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:12:19] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:12:21] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:12:21] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:12:22] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:12:29] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:12:30] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:12:30] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:12:30] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:12:32] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:12:33] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:12:37] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:12:38] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:12:39] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:12:40] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:12:45] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:12:45] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:12:46] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:12:54] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:12:54] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:12:55] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:12:55] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:12:57] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:13:01] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:13:03] "GET /health HTTP/1.1" 200 -
+45.127.110.98 - - [06/Apr/2026 20:13:55] "GET / HTTP/1.1" 200 -
+45.127.110.98 - - [06/Apr/2026 20:13:56] "GET /notification-settings HTTP/1.1" 200 -
+45.127.110.98 - - [06/Apr/2026 20:13:56] "GET /favicon.ico HTTP/1.1" 404 -
+45.127.110.98 - - [06/Apr/2026 20:13:59] "GET /health HTTP/1.1" 200 -
+45.127.110.98 - - [06/Apr/2026 20:14:00] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:14:00] "GET /health HTTP/1.1" 200 -
+45.127.110.98 - - [06/Apr/2026 20:14:01] "GET /health HTTP/1.1" 200 -
+45.127.110.98 - - [06/Apr/2026 20:14:02] "GET /health HTTP/1.1" 200 -
+45.127.110.98 - - [06/Apr/2026 20:14:08] "GET /health HTTP/1.1" 200 -
+45.127.110.98 - - [06/Apr/2026 20:14:08] "GET /health HTTP/1.1" 200 -
+45.127.110.98 - - [06/Apr/2026 20:14:08] "GET /health HTTP/1.1" 200 -
+45.127.110.98 - - [06/Apr/2026 20:14:10] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:14:17] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:14:17] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:14:18] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:14:19] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:14:23] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:14:26] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:14:27] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:14:31] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:14:36] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:14:36] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:14:36] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:14:36] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:14:36] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:14:38] "GET /health HTTP/1.1" 200 -
+[2026-04-06 20:14:42,857] ERROR in app: Exception on /logout [GET]
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\venv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mkpra\Downloads\Untitled\venv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mkpra\Downloads\Untitled\venv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mkpra\Downloads\Untitled\venv\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 2180, in logout
+    clear_google_auth_state()
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 501, in clear_google_auth_state
+    candidate.unlink()
+  File "C:\Users\mkpra\AppData\Local\Programs\Python\Python310\lib\pathlib.py", line 1206, in unlink
+    self._accessor.unlink(self)
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\mkpra\\Downloads\\Untitled\\google_auth_state.bin'
+61.1.180.245 - - [06/Apr/2026 20:14:42] "GET /logout?desktop=1 HTTP/1.1" 500 -
+61.1.180.245 - - [06/Apr/2026 20:14:46] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:14:46] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:15:03] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:16:04] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:17:49] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:17:49] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:17:49] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:17:49] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:17:49] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:17:49] "GET /health HTTP/1.1" 200 -

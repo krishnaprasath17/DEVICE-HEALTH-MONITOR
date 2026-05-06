@@ -1,0 +1,2261 @@
+2026-03-28 09:24:54,496 [WARNING] device_health_monitor: Alert monitor is not running, starting or restarting it.
+2026-03-28 09:24:54,496 [INFO] device_health_monitor: Background services started.
+2026-03-28 09:26:21,822 [INFO] device_health_monitor: OAuth start ok host=127.0.0.1:5000 redirect_uri=http://127.0.0.1:5000/auth/google/callback next=/auth/desktop-complete
+2026-03-28 09:26:35,935 [INFO] device_health_monitor: OAuth callback code received host=127.0.0.1:5000 redirect_uri=http://127.0.0.1:5000/auth/google/callback
+2026-03-28 09:26:37,145 [INFO] device_health_monitor: OAuth callback failed: TypeError: memoryview: a bytes-like object is required, not 'int'
+2026-03-28 09:30:40,351 [WARNING] device_health_monitor: Alert monitor is not running, starting or restarting it.
+2026-03-28 09:30:40,354 [INFO] device_health_monitor: Background services started.
+2026-03-28 09:31:05,266 [INFO] device_health_monitor: OAuth start ok host=127.0.0.1:5000 redirect_uri=http://127.0.0.1:5000/auth/google/callback next=/auth/desktop-complete
+2026-03-28 09:31:21,249 [INFO] device_health_monitor: OAuth callback code received host=127.0.0.1:5000 redirect_uri=http://127.0.0.1:5000/auth/google/callback
+2026-03-28 09:31:22,762 [INFO] device_health_monitor: OAuth callback failed: TypeError: memoryview: a bytes-like object is required, not 'int'
+2026-03-28 09:31:55,982 [INFO] device_health_monitor: OAuth start ok host=127.0.0.1:5000 redirect_uri=http://127.0.0.1:5000/auth/google/callback next=/auth/desktop-complete
+2026-03-28 09:32:11,757 [INFO] device_health_monitor: OAuth callback code received host=127.0.0.1:5000 redirect_uri=http://127.0.0.1:5000/auth/google/callback
+2026-03-28 09:32:12,411 [INFO] device_health_monitor: OAuth callback failed: TypeError: memoryview: a bytes-like object is required, not 'int'
+2026-03-28 09:32:14,853 [INFO] device_health_monitor: OAuth start ok host=127.0.0.1:5000 redirect_uri=http://127.0.0.1:5000/auth/google/callback next=/auth/desktop-complete
+2026-03-28 09:32:29,576 [INFO] device_health_monitor: OAuth callback code received host=127.0.0.1:5000 redirect_uri=http://127.0.0.1:5000/auth/google/callback
+2026-03-28 09:32:30,636 [INFO] device_health_monitor: OAuth callback failed: TypeError: memoryview: a bytes-like object is required, not 'int'
+2026-03-28 09:33:49,480 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:33:49,492 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:33:49,502 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:33:52,467 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:33:52,473 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:33:52,478 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:33:54,480 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:33:54,486 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:33:54,491 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:33:54,611 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:33:56,467 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:33:56,467 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:33:56,474 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:33:58,467 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:33:58,467 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:33:58,475 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:00,467 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:00,475 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:00,482 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:02,471 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:02,474 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:02,480 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:04,468 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:04,469 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:04,474 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:06,475 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:06,480 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:06,482 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:08,468 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:08,475 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:08,481 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:10,469 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:10,475 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:10,479 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:12,466 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:12,467 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:12,467 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:16,428 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:16,434 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:16,438 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:19,408 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:19,411 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:19,419 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:23,380 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:23,388 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:23,394 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:25,486 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:25,491 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:25,499 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:28,477 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:28,483 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:28,489 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:30,484 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:30,488 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:30,494 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:32,468 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:32,468 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:32,475 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:34,508 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:34,515 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:34,526 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:36,469 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:36,475 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:36,477 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:38,471 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:38,478 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:38,480 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:40,475 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:40,478 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:40,485 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:42,490 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:42,497 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:42,504 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:46,307 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:46,314 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:46,318 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:49,538 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:49,546 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:49,554 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:54,631 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:57,396 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:57,403 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:57,414 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:59,479 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:59,485 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:34:59,492 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:03,310 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:03,315 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:03,318 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:05,467 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:05,473 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:05,475 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:07,476 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:07,478 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:07,486 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:09,469 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:09,476 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:09,483 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:11,468 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:11,468 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:11,475 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:13,476 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:13,482 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:13,485 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:16,325 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:16,329 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:16,335 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:24,492 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:24,504 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:24,507 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:27,469 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:27,469 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:27,476 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:29,484 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:29,488 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:29,494 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:31,485 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:31,489 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:31,494 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:33,467 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:33,467 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:33,471 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:35,462 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:35,468 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:35,468 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:37,471 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:37,477 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:37,481 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:39,503 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:39,508 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:39,513 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:41,469 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:41,474 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:41,477 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:43,474 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:43,482 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:43,488 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:45,474 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:45,475 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:45,482 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:47,479 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:47,481 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:47,488 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:49,136 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:49,149 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:35:49,159 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 303, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 312, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 305, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 09:57:17,293 [WARNING] device_health_monitor: Alert monitor is not running, starting or restarting it.
+2026-03-28 09:57:17,293 [INFO] device_health_monitor: Background services started.
+2026-03-28 09:59:38,525 [WARNING] device_health_monitor: Alert monitor is not running, starting or restarting it.
+2026-03-28 09:59:38,525 [INFO] device_health_monitor: Background services started.
+2026-03-28 10:01:05,249 [WARNING] device_health_monitor: Alert monitor is not running, starting or restarting it.
+2026-03-28 10:01:05,249 [INFO] device_health_monitor: Background services started.
+2026-03-28 10:03:15,554 [WARNING] device_health_monitor: Alert monitor is not running, starting or restarting it.
+2026-03-28 10:03:15,554 [INFO] device_health_monitor: Background services started.
+2026-03-28 10:04:21,430 [WARNING] device_health_monitor: Alert monitor is not running, starting or restarting it.
+2026-03-28 10:04:21,430 [INFO] device_health_monitor: Background services started.
+2026-03-28 10:05:13,308 [INFO] device_health_monitor: OAuth start ok host=127.0.0.1:5000 redirect_uri=http://127.0.0.1:5000/auth/google/callback next=/auth/desktop-complete
+2026-03-28 10:05:30,206 [INFO] device_health_monitor: OAuth callback code received host=127.0.0.1:5000 redirect_uri=http://127.0.0.1:5000/auth/google/callback
+2026-03-28 10:05:31,303 [INFO] device_health_monitor: OAuth callback success email=m.k.prasathrocker555@gmail.com
+2026-03-28 10:46:43,431 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 416, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 425, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 418, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 10:46:43,633 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 416, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 425, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 418, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 10:47:23,808 [INFO] device_health_monitor: Automatic CPU alert sent at 91.4%
+2026-03-28 12:31:38,511 [WARNING] device_health_monitor: CPU sampler is not running, starting or restarting it.
+2026-03-28 12:31:38,511 [INFO] device_health_monitor: Background services started.
+2026-03-28 12:31:38,514 [INFO] device_health_monitor: CPU sampler started.
+2026-03-28 12:31:38,515 [WARNING] device_health_monitor: Alert monitor is not running, starting or restarting it.
+2026-03-28 12:31:38,536 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 450, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 459, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 452, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 12:32:00,840 [WARNING] device_health_monitor: CPU sampler is not running, starting or restarting it.
+2026-03-28 12:32:00,840 [INFO] device_health_monitor: Background services started.
+2026-03-28 12:32:00,840 [INFO] device_health_monitor: CPU sampler started.
+2026-03-28 12:32:00,840 [WARNING] device_health_monitor: Alert monitor is not running, starting or restarting it.
+2026-03-28 12:32:00,852 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 450, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 459, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 452, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 12:37:25,236 [WARNING] device_health_monitor: CPU sampler is not running, starting or restarting it.
+2026-03-28 12:37:25,236 [INFO] device_health_monitor: Background services started.
+2026-03-28 12:37:25,238 [INFO] device_health_monitor: CPU sampler started.
+2026-03-28 12:37:25,238 [WARNING] device_health_monitor: Alert monitor is not running, starting or restarting it.
+2026-03-28 12:37:25,243 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 450, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 459, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 452, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 13:15:43,766 [WARNING] device_health_monitor: CPU sampler is not running, starting or restarting it.
+2026-03-28 13:15:43,766 [INFO] device_health_monitor: Background services started.
+2026-03-28 13:15:43,768 [INFO] device_health_monitor: CPU sampler started.
+2026-03-28 13:15:43,768 [WARNING] device_health_monitor: Alert monitor is not running, starting or restarting it.
+2026-03-28 13:15:43,780 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 450, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 459, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 452, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 13:51:39,945 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 450, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 459, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 452, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-03-28 13:52:04,562 [WARNING] device_health_monitor: Could not read saved Google auth state.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 450, in _dpapi_decrypt
+    return win32crypt.CryptUnprotectData(ciphertext, None, None, None, 0)[1].decode("utf-8")
+pywintypes.error: (-2146893813, 'CryptUnprotectData', 'Key not valid for use in specified state.')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 459, in load_saved_google_auth_state
+    return normalize_auth_state(json.loads(_dpapi_decrypt(encrypted_path.read_bytes())))
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 452, in _dpapi_decrypt
+    return ciphertext.decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x9d in position 6: invalid start byte
+2026-04-06 20:11:07,638 [WARNING] device_health_monitor: CPU sampler is not running, starting or restarting it.
+2026-04-06 20:11:07,638 [INFO] device_health_monitor: Background services started.
+2026-04-06 20:11:07,641 [INFO] device_health_monitor: CPU sampler started.
+2026-04-06 20:11:07,641 [WARNING] device_health_monitor: Alert monitor is not running, starting or restarting it.
+2026-04-06 20:11:08,308 [WARNING] device_health_monitor: Google token refresh failed.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 534, in build_credentials
+    credentials.refresh(GoogleRequest())
+  File "C:\Users\mkpra\Downloads\Untitled\venv\lib\site-packages\google\oauth2\credentials.py", line 412, in refresh
+    ) = reauth.refresh_grant(
+  File "C:\Users\mkpra\Downloads\Untitled\venv\lib\site-packages\google\oauth2\reauth.py", line 370, in refresh_grant
+    _client._handle_error_response(response_data, retryable_error)
+  File "C:\Users\mkpra\Downloads\Untitled\venv\lib\site-packages\google\oauth2\_client.py", line 69, in _handle_error_response
+    raise exceptions.RefreshError(
+google.auth.exceptions.RefreshError: ('invalid_grant: Bad Request', {'error': 'invalid_grant', 'error_description': 'Bad Request'})
+2026-04-06 20:11:08,408 [WARNING] device_health_monitor: Automatic RAM alert trigger met at 90.6% but the email could not be sent: Please sign in with Google to continue.
+2026-04-06 20:12:08,825 [WARNING] device_health_monitor: Google token refresh failed.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 534, in build_credentials
+    credentials.refresh(GoogleRequest())
+  File "C:\Users\mkpra\Downloads\Untitled\venv\lib\site-packages\google\oauth2\credentials.py", line 412, in refresh
+    ) = reauth.refresh_grant(
+  File "C:\Users\mkpra\Downloads\Untitled\venv\lib\site-packages\google\oauth2\reauth.py", line 370, in refresh_grant
+    _client._handle_error_response(response_data, retryable_error)
+  File "C:\Users\mkpra\Downloads\Untitled\venv\lib\site-packages\google\oauth2\_client.py", line 69, in _handle_error_response
+    raise exceptions.RefreshError(
+google.auth.exceptions.RefreshError: ('invalid_grant: Bad Request', {'error': 'invalid_grant', 'error_description': 'Bad Request'})
+2026-04-06 20:12:08,834 [WARNING] device_health_monitor: Automatic RAM alert trigger met at 86.0% but the email could not be sent: Please sign in with Google to continue.
+2026-04-06 20:25:46,014 [WARNING] device_health_monitor: CPU sampler is not running, starting or restarting it.
+2026-04-06 20:25:46,014 [INFO] device_health_monitor: Background services started.
+2026-04-06 20:25:46,020 [INFO] device_health_monitor: CPU sampler started.
+2026-04-06 20:25:46,021 [WARNING] device_health_monitor: System snapshot sampler is not running, starting or restarting it.
+2026-04-06 20:25:46,027 [INFO] device_health_monitor: System snapshot sampler started.
+2026-04-06 20:25:46,027 [WARNING] device_health_monitor: Alert monitor is not running, starting or restarting it.
+2026-04-06 20:26:58,926 [INFO] device_health_monitor: OAuth start ok host=untumidly-prevolitional-delaney.ngrok-free.dev redirect_uri=https://untumidly-prevolitional-delaney.ngrok-free.dev/auth/google/callback next=/auth/desktop-complete
+2026-04-06 20:27:31,985 [INFO] device_health_monitor: OAuth callback code received host=untumidly-prevolitional-delaney.ngrok-free.dev redirect_uri=https://untumidly-prevolitional-delaney.ngrok-free.dev/auth/google/callback
+2026-04-06 20:27:32,725 [INFO] device_health_monitor: OAuth callback success email=m.k.prasathrocker555@gmail.com
+2026-04-06 20:30:47,041 [INFO] device_health_monitor: Automatic RAM alert sent at 88.8%
+2026-04-20 12:46:25,980 [WARNING] device_health_monitor: CPU sampler is not running, starting or restarting it.
+2026-04-20 12:46:25,980 [INFO] device_health_monitor: Background services started.
+2026-04-20 12:46:25,981 [INFO] device_health_monitor: CPU sampler started.
+2026-04-20 12:46:25,981 [WARNING] device_health_monitor: System snapshot sampler is not running, starting or restarting it.
+2026-04-20 12:46:25,984 [INFO] device_health_monitor: System snapshot sampler started.
+2026-04-20 12:46:25,984 [WARNING] device_health_monitor: Alert monitor is not running, starting or restarting it.
+2026-04-20 12:46:26,521 [WARNING] device_health_monitor: Google token refresh failed.
+Traceback (most recent call last):
+  File "C:\Users\mkpra\Downloads\Untitled\app.py", line 595, in build_credentials
+    credentials.refresh(GoogleRequest())
+  File "C:\Users\mkpra\Downloads\Untitled\venv\lib\site-packages\google\oauth2\credentials.py", line 412, in refresh
+    ) = reauth.refresh_grant(
+  File "C:\Users\mkpra\Downloads\Untitled\venv\lib\site-packages\google\oauth2\reauth.py", line 370, in refresh_grant
+    _client._handle_error_response(response_data, retryable_error)
+  File "C:\Users\mkpra\Downloads\Untitled\venv\lib\site-packages\google\oauth2\_client.py", line 69, in _handle_error_response
+    raise exceptions.RefreshError(
+google.auth.exceptions.RefreshError: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})
+2026-04-20 12:46:26,540 [WARNING] device_health_monitor: Automatic RAM alert trigger met at 86.5% but the email could not be sent: Please sign in with Google to continue.
+2026-04-20 12:46:42,263 [INFO] device_health_monitor: OAuth start ok host=127.0.0.1:5000 redirect_uri=http://127.0.0.1:5000/auth/google/callback next=/auth/desktop-complete
+2026-04-20 13:35:32,377 [INFO] device_health_monitor: OAuth start ok host=127.0.0.1:5000 redirect_uri=http://127.0.0.1:5000/auth/google/callback next=/auth/desktop-complete
+2026-04-20 13:35:41,361 [INFO] device_health_monitor: OAuth start ok host=127.0.0.1:5000 redirect_uri=http://127.0.0.1:5000/auth/google/callback next=/auth/desktop-complete

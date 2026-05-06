@@ -1,0 +1,63 @@
+2026-04-06 20:25:46,014 [WARNING] device_health_monitor: CPU sampler is not running, starting or restarting it.
+2026-04-06 20:25:46,014 [INFO] device_health_monitor: Background services started.
+2026-04-06 20:25:46,020 [INFO] device_health_monitor: CPU sampler started.
+2026-04-06 20:25:46,021 [WARNING] device_health_monitor: System snapshot sampler is not running, starting or restarting it.
+2026-04-06 20:25:46,027 [INFO] device_health_monitor: System snapshot sampler started.
+2026-04-06 20:25:46,027 [WARNING] device_health_monitor: Alert monitor is not running, starting or restarting it.
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+127.0.0.1 - - [06/Apr/2026 20:25:50] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:25:56] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:25:56] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:25:56] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:25:56] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:25:56] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:25:56] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:25:57] "GET / HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:25:58] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:25:58] "GET /notification-settings HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:26:01] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:26:04] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:26:06] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:26:08] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:26:10] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:26:12] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:26:14] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:26:15] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:26:15] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:26:15] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:26:15] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:26:15] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:26:15] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [06/Apr/2026 20:26:15] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:26:17] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:26:19] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:26:21] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:26:23] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:26:25] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:26:28] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:26:30] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:26:32] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:26:34] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:26:36] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:26:39] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:26:41] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:26:43] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:26:45] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:26:47] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:26:49] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:26:52] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:26:54] "GET /health HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:26:55] "GET /logout?desktop=1 HTTP/1.1" 302 -
+61.1.180.245 - - [06/Apr/2026 20:26:55] "GET /login?desktop=1 HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:26:56] "GET /auth/status HTTP/1.1" 200 -
+61.1.180.245 - - [06/Apr/2026 20:26:58] "GET /auth/status HTTP/1.1" 200 -
+2026-04-06 20:26:58,926 [INFO] device_health_monitor: OAuth start ok host=untumidly-prevolitional-delaney.ngrok-free.dev redirect_uri=https://untumidly-prevolitional-delaney.ngrok-free.dev/auth/google/callback next=/auth/desktop-complete
+61.1.180.245 - - [06/Apr/2026 20:26:58] "GET /auth/google/start?next=/auth/desktop-complete HTTP/1.1" 302 -
+2026-04-06 20:27:31,985 [INFO] device_health_monitor: OAuth callback code received host=untumidly-prevolitional-delaney.ngrok-free.dev redirect_uri=https://untumidly-prevolitional-delaney.ngrok-free.dev/auth/google/callback
+2026-04-06 20:27:32,725 [INFO] device_health_monitor: OAuth callback success email=m.k.prasathrocker555@gmail.com
+61.1.180.245 - - [06/Apr/2026 20:27:32] "GET /auth/google/callback?state=3nu2cE9yQF9rvtyAzw0u1CaPALbIOI&iss=https://accounts.google.com&code=4/0Aci98E9c8OtHGQINjwBZElinMQQCVtgTZNCgeTLWQprlTdCLWLGPDU68hkYtrviUzuNolQ&scope=email%20profile%20https://www.googleapis.com/auth/gmail.send%20https://www.googleapis.com/auth/userinfo.profile%20https://www.googleapis.com/auth/userinfo.email%20openid&authuser=1&prompt=consent HTTP/1.1" 302 -
+61.1.180.245 - - [06/Apr/2026 20:27:32] "GET /auth/desktop-complete HTTP/1.1" 200 -
+2026-04-06 20:30:47,041 [INFO] device_health_monitor: Automatic RAM alert sent at 88.8%
+127.0.0.1 - - [06/Apr/2026 20:34:13] "GET /health HTTP/1.1" 200 -

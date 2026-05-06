@@ -1,0 +1,14 @@
+2026-04-19 09:26:04,919 [WARNING] device_health_monitor: CPU sampler is not running, starting or restarting it.
+2026-04-19 09:26:04,919 [INFO] device_health_monitor: Background services started.
+2026-04-19 09:26:04,919 [INFO] device_health_monitor: CPU sampler started.
+2026-04-19 09:26:04,919 [WARNING] device_health_monitor: System snapshot sampler is not running, starting or restarting it.
+2026-04-19 09:26:04,919 [INFO] device_health_monitor: System snapshot sampler started.
+2026-04-19 09:26:04,919 [WARNING] device_health_monitor: Alert monitor is not running, starting or restarting it.
+2026-04-19 09:26:21,804 [INFO] device_health_monitor: OAuth start ok host=untumidly-prevolitional-delaney.ngrok-free.dev redirect_uri=https://untumidly-prevolitional-delaney.ngrok-free.dev/auth/google/callback next=/auth/desktop-complete
+2026-04-19 09:26:44,618 [INFO] device_health_monitor: OAuth callback code received host=untumidly-prevolitional-delaney.ngrok-free.dev redirect_uri=https://untumidly-prevolitional-delaney.ngrok-free.dev/auth/google/callback
+2026-04-19 09:26:45,411 [INFO] device_health_monitor: OAuth callback success email=m.k.prasathrocker555@gmail.com
+2026-04-19 09:27:05,927 [INFO] device_health_monitor: Automatic RAM alert sent at 87.1%
+2026-04-19 09:32:17,336 [INFO] device_health_monitor: OAuth start ok host=untumidly-prevolitional-delaney.ngrok-free.dev redirect_uri=https://untumidly-prevolitional-delaney.ngrok-free.dev/auth/google/callback next=/auth/desktop-complete
+2026-04-19 09:32:31,736 [INFO] device_health_monitor: OAuth callback code received host=untumidly-prevolitional-delaney.ngrok-free.dev redirect_uri=https://untumidly-prevolitional-delaney.ngrok-free.dev/auth/google/callback
+2026-04-19 09:32:32,247 [INFO] device_health_monitor: OAuth callback success email=m.k.prasathrocker555@gmail.com
+2026-04-19 09:33:07,023 [INFO] device_health_monitor: Automatic RAM alert sent at 84.3%

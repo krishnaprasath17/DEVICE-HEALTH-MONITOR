@@ -1,0 +1,11 @@
+{
+  "email_alerts_enabled": true,
+  "email_subject_prefix": "Device Health Alert",
+  "cpu_alerts_enabled": true,
+  "ram_alerts_enabled": true,
+  "cpu_high": 85,
+  "ram_high": 85,
+  "battery_low": 20,
+  "cooldown_minutes": 60,
+  "alert_check_seconds": 60
+}

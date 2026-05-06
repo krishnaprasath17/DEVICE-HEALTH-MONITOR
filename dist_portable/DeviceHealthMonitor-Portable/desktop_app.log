@@ -1,0 +1,8 @@
+2026-04-19 09:26:04,508 [INFO] desktop_app: Flask thread started, waiting for server.
+2026-04-19 09:26:11,634 [INFO] desktop_app: ngrok tunnel started: https://untumidly-prevolitional-delaney.ngrok-free.dev
+2026-04-19 09:26:12,018 [INFO] desktop_app: Server ready, launching desktop shell via public URL: https://untumidly-prevolitional-delaney.ngrok-free.dev
+2026-04-19 09:26:12,024 [INFO] desktop_app: System tray icon started.
+2026-04-19 09:26:46,096 [INFO] desktop_app: Auth state changed, navigating to https://untumidly-prevolitional-delaney.ngrok-free.dev/
+2026-04-19 09:32:13,385 [INFO] desktop_app: Auth state changed, navigating to https://untumidly-prevolitional-delaney.ngrok-free.dev/login?desktop=1
+2026-04-19 09:32:33,034 [INFO] desktop_app: Auth state changed, navigating to https://untumidly-prevolitional-delaney.ngrok-free.dev/
+2026-04-19 09:38:40,933 [INFO] desktop_app: Close button pressed, exiting app.
