@@ -3,6 +3,8 @@ __pycache__/
 *.pyo
 *.pyd
 
+dist_portable/
+
 Thumbs.db
 .DS_Store
 test_heredoc.txt
